@@ -10,7 +10,7 @@ module.exports = {
 		
 		var embed = {
 			title: "User Guide",
-			description: "I am " + userMention + ", a morality and ethics bot for Discord. I provide judgements on the morality of your messages using artifical intelligence from the [Delphi AI](https://delphi.allenai.org/)." + 
+			description: "I am " + userMention + ", an ethics bot for Discord. I provide judgements on the morality of your messages using artifical intelligence from the [Delphi AI](https://delphi.allenai.org/)." + 
 			"\n\nDelphi is an AI designed by the Allen Institute for AI, who described it as *\"a computational model for descriptive ethics, i.e., people’s moral judgments on a variety of everyday situations.\"*",
 			color: 13621503, //icy white
 			fields: [
