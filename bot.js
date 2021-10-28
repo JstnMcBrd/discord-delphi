@@ -1,5 +1,5 @@
 /* GLOBAL MODIFIERS */
-var lastUpdated = new Date(2021, 9, 24, 0, 30);	//month is 0-indexed
+var lastUpdated = new Date(2021, 9, 28, 17, 30);	//month is 0-indexed
 var typingSpeed = 6;	//how fast the bot sends messages (characters per second)
 
 /* LOG IN */
@@ -198,13 +198,20 @@ var replaceUnknownEmojis = function(content) {
 	return content;
 }
 const fetchDelphiResponse = async function(input) {
-	const requestURL = "https://mosaic-api-morality.apps.allenai.org/api/ponder?action1=" + encodeURIComponent(input);
+	const requestURL = "https://mosaic-api-frontdoor.apps.allenai.org/predict?action1=" + encodeURIComponent(input);
 	let json = await fetchJSON(requestURL);
 	return json.answer.text;
 }
 const fetchJSON = async function(requestURL) {
 	console.log("\tFetching from URL:".system, requestURL);
 	let response = await fetch(requestURL);
+	if (response.status !== 200 || response.statusText !== "OK") {
+		var error = new Error();
+		error.name = "HTTPError";
+		error.message = response.status + " " + response.statusText;
+		throw error;
+	}
+	
 	let json = await response.json();
 	console.log("\tFetched JSON:".info, JSON.stringify(json));
 	return json;
@@ -258,9 +265,11 @@ var indent = function(str, numTabs) {	//this is for indenting strings that have 
 }
 
 var debugFormatError = function(error) {
+	var e = new Error();
 	if (error.name !== undefined)
-		error.name = error.name.error;
-	return error;
+		e.name = error.name.error;
+	e.message = error.message;
+	return e;
 }
 
 var debugMessage = function(message) {
