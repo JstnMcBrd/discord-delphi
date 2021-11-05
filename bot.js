@@ -1,5 +1,5 @@
 /* GLOBAL MODIFIERS */
-var lastUpdated = new Date(2021, 9, 28, 17, 30);	//month is 0-indexed
+var lastUpdated = new Date(2021, 10, 5, 4, 00);	//month is 0-indexed
 var typingSpeed = 6;	//how fast the bot sends messages (characters per second)
 
 /* LOG IN */
@@ -29,7 +29,7 @@ var onceReady = async function() {
 var setUserActivity = function() {
 	var repeatWait = 5*60; //seconds
 	activityOptions = {
-		name: "@"+client.user.username,
+		name: "/help",
 		type: 'LISTENING',
 		url: "https://delphi.allenai.org/"
 	}
@@ -166,17 +166,9 @@ var onMessage = async function(message) {
 	}).catch(error => {
 		console.error("\t" + debugFormatError(error));	//log the error
 		console.error("Failed to generate response".warning);
-		//if (error.message === "Response timeout of 10000ms exceeded" ||
-		//error === "Failed to get a response after 15 tries") {
-		//	console.log("Trying again".system);
-		//	console.log();
-		//	onMessage(message);								//if error is timeout, then try again
-		//}
-		//else {
 		console.log("Replying with error message".system);
 		console.log();
 		sendErrorMessage(message, error);				//if unknown error, then respond to message with error message
-		//}
 	});
 }
 var removeMentions = function(content) {
@@ -198,6 +190,7 @@ var replaceUnknownEmojis = function(content) {
 	return content;
 }
 const fetchDelphiResponse = async function(input) {
+	if (input == "") input = " "
 	const requestURL = "https://mosaic-api-frontdoor.apps.allenai.org/predict?action1=" + encodeURIComponent(input);
 	let json = await fetchJSON(requestURL);
 	return json.answer.text;
