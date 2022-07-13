@@ -1,5 +1,5 @@
 /* GLOBAL MODIFIERS */
-var lastUpdated = new Date(2021, 10, 5, 4, 00);	//month is 0-indexed
+var lastUpdated = new Date(2022, 6, 13, 2, 30);	//month is 0-indexed
 var typingSpeed = 6;	//how fast the bot sends messages (characters per second)
 
 /* LOG IN */
@@ -292,7 +292,7 @@ console.log("Importing packages");//.system);	//won't work yet because colors is
 var fs = require('fs');
 //var fetch = require('node-fetch');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-var colors = require('colors');
+var colors = require('@colors/colors');
 colors.setTheme({
 	system: ['green'],
 	warning: ['yellow'],
