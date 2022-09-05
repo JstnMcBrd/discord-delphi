@@ -1,2 +1,3 @@
-accounts/Delphi
 node_modules
+accounts/
+!accounts/ExampleUsername
