@@ -19,7 +19,7 @@ const connect = function() {
 	const retryWait = 10;
 
 	console.log('Logging in'.system);
-	client.login(auth.token).then(() => {
+	client.login(token).then(() => {
 		console.log('Logged in successfully'.system);
 		console.log();
 	}).catch(error => {
@@ -417,7 +417,7 @@ if (process.argv[2] === undefined) {
 	throw debugFormatError(error);
 }
 const filePath = './accounts/' + process.argv[2] + '/';
-const authFilePath = filePath + 'auth.json';
+const configFilePath = filePath + 'config.json';
 
 // Does the necessary directory exist?
 if (!fs.existsSync(filePath)) {
@@ -429,14 +429,14 @@ if (!fs.existsSync(filePath)) {
 }
 
 // Do the necessary files exist?
-if (!fs.existsSync(authFilePath)) {
+if (!fs.existsSync(configFilePath)) {
 	const error = new Error();
 	error.name = 'Missing Memory Files';
 	error.message = 'Account directory missing essential memory files';
-	error.message += '\n\tPlease create the necessary files (' + authFilePath + ')';
+	error.message += '\n\tPlease create the necessary files (' + configFilePath + ')';
 	throw debugFormatError(error);
 }
-const auth = require(authFilePath);
+const { token } = require(configFilePath);
 
 console.log('Loaded memory files successfully'.system);
 console.log();
