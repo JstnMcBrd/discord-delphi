@@ -12,8 +12,6 @@ import { debug, error, info } from "../logger.js";
 export const messageCreate = new EventHandler("messageCreate")
 	.setOnce(false)
 	.setExecution(async message => {
-		// TODO
-
 		// Ignore certain messages
 		if (isFromSelf(message)) {
 			return;
@@ -52,36 +50,53 @@ export const messageCreate = new EventHandler("messageCreate")
 	});
 
 /**
- * Formats the request URL for `fetchJSON` and parses the JSON for the answer text.
+ * Fetches a response from the Delphi AI.
  *
- * @param input // TODO
- * @returns // TODO
+ * @param input The prompt to send to the AI
+ * @returns The respone from the Delphi AI
  */
-async function fetchDelphiResponse (input: string) {
-	if (input === "") {
-		input = " ";
+async function fetchDelphiResponse (prompt: string): Promise<string> {
+	if (prompt === "") {
+		prompt = " ";
 	}
-	const requestURL = `https://mosaic-api-frontdoor.apps.allenai.org/predict?action1=${encodeURIComponent(input)}`;
-	// TODO make type-safe
-	const json = await fetchJSON(requestURL) as { answer: { text: string } };
-	return json.answer.text;
+	const requestURL = `https://mosaic-api-frontdoor.apps.allenai.org/predict?action1=${encodeURIComponent(prompt)}`;
+	const json = await fetchJSON(requestURL);
+
+	if (!Object.hasOwn(json, "answer")) {
+		throw new TypeError("API response did not include 'answer'.");
+	}
+	const { answer } = json as { answer: unknown };
+	if (!answer || typeof answer !== "object" || !Object.hasOwn(answer, "text")) {
+		throw new TypeError("API response answer did not include 'text'.");
+	}
+	const { text } = answer as { text: unknown };
+	if (!text || typeof text !== "string") {
+		throw new TypeError("API response answer text was not an expected type.");
+	}
+	return text;
 }
 
 /**
- * Fetches a JSON from a URL.
+ * Fetches a JSON body response from a URL.
  *
- * @param requestURL // TODO
- * @returns // TODO
+ * @param requestURL The URL to send a request to
+ * @returns The JSON body of the response
  */
-async function fetchJSON (requestURL: string): Promise<unknown> {
+async function fetchJSON (requestURL: string): Promise<object> {
 	const response = await fetch(requestURL);
 	if (!response.ok) {
-		const err = new Error(`${response.status} ${response.statusText}`);
+		const err = new Error(`${response.status} ${response.statusText}.`);
 		err.name = "HTTPError";
+		err.cause = response;
 		throw err;
 	}
 	const json: unknown = await response.json();
-	return json;
+	if (json && typeof json === "object") {
+		return json;
+	}
+	else {
+		return {};
+	}
 }
 
 /**
