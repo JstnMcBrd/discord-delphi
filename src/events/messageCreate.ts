@@ -74,8 +74,6 @@ async function fetchDelphiResponse (input: string) {
  * @returns // TODO
  */
 async function fetchJSON (requestURL: string): Promise<unknown> {
-	// TODO standardize debug output
-	info(`\tFetching from URL: ${requestURL}`);
 	const response = await fetch(requestURL);
 	if (!response.ok) {
 		const err = new Error(`${response.status} ${response.statusText}`);
@@ -83,7 +81,6 @@ async function fetchJSON (requestURL: string): Promise<unknown> {
 		throw err;
 	}
 	const json: unknown = await response.json();
-	info(`\tFetched JSON: ${JSON.stringify(json)}`);
 	return json;
 }
 
