@@ -1,3 +1,6 @@
 node_modules
-accounts/*
-!accounts/ExampleUsername
+dist
+memory/*
+!memory/example-user-id
+.env
+todo

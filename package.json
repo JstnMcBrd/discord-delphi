@@ -1,24 +1,29 @@
 {
-	"name": "Discord-Delphi",
+	"name": "discord-delphi",
 	"version": "2.0.0-alpha",
 	"description": "Ethics bot for Discord",
 	"author": "Justin McBride",
-	"type": "commonjs",
+	"type": "module",
 	"private": true,
 	"scripts": {
+		"build": "tsc",
 		"lint": "eslint .",
-		"start": "cd src && node ./index.js",
-		"commands": "cd src && node ./deploy-commands.js"
+		"start": "node ./dist/main.js",
+		"commands": "node ./dist/deployCommands.js"
 	},
 	"engines": {
 		"node": "18"
 	},
 	"dependencies": {
 		"@colors/colors": "^1.5.0",
-		"discord.js": "^14.4.0",
+		"discord.js": "^14.11.0",
+		"dotenv": "^16.3.1",
 		"node-fetch": "^3.2.8"
 	},
 	"devDependencies": {
-		"eslint": "^8.24.0"
+		"@typescript-eslint/eslint-plugin": "^5.59.11",
+		"@typescript-eslint/parser": "^5.59.11",
+		"eslint": "^8.43.0",
+		"typescript": "^5.1.3"
 	}
 }
