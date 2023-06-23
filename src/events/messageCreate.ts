@@ -1,5 +1,4 @@
 import type { Message, TextBasedChannel } from "discord.js";
-import fetch from "node-fetch";
 
 import { EventHandler } from "./EventHandler.js";
 import { formatPrompt } from "../utils/formatPrompt.js";
@@ -75,15 +74,15 @@ async function fetchDelphiResponse (input: string) {
  * @returns // TODO
  */
 async function fetchJSON (requestURL: string): Promise<unknown> {
+	// TODO standardize debug output
 	info(`\tFetching from URL: ${requestURL}`);
 	const response = await fetch(requestURL);
-	if (response.status !== 200 || response.statusText !== "OK") {
+	if (!response.ok) {
 		const err = new Error(`${response.status} ${response.statusText}`);
 		err.name = "HTTPError";
 		throw err;
 	}
-
-	const json = await response.json();
+	const json: unknown = await response.json();
 	info(`\tFetched JSON: ${JSON.stringify(json)}`);
 	return json;
 }
