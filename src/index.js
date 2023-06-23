@@ -416,7 +416,7 @@ if (process.argv[2] === undefined) {
 	error.message += '\n\tnode ' + process.argv[1] + ' ' + '[ACCOUNT DIRECTORY NAME]'.underline;
 	throw debugFormatError(error);
 }
-const filePath = './accounts/' + process.argv[2] + '/';
+const filePath = '../accounts/' + process.argv[2] + '/';
 const configFilePath = filePath + 'config.json';
 
 // Does the necessary directory exist?

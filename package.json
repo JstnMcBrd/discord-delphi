@@ -7,8 +7,8 @@
 	"private": true,
 	"scripts": {
 		"lint": "eslint .",
-		"start": "node ./index.js",
-		"commands": "node ./deploy-commands.js"
+		"start": "cd src && node ./index.js",
+		"commands": "cd src && node ./deploy-commands.js"
 	},
 	"engines": {
 		"node": "18"
