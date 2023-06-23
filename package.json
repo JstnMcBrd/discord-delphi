@@ -1,11 +1,21 @@
 {
-  "main": "index.js",
-  "dependencies": {
-    "@colors/colors": "^1.5.0",
-    "discord.js": "^14.4.0",
-    "node-fetch": "^3.2.8"
-  },
-  "devDependencies": {
-    "eslint": "^8.24.0"
-  }
+	"name": "Discord-Delphi",
+	"version": "2.0.0-alpha",
+	"description": "Ethics bot for Discord",
+	"author": "Justin McBride",
+	"type": "commonjs",
+	"private": true,
+	"scripts": {
+		"lint": "eslint .",
+		"start": "node ./index.js",
+		"commands": "node ./deploy-commands.js"
+	},
+	"dependencies": {
+		"@colors/colors": "^1.5.0",
+		"discord.js": "^14.4.0",
+		"node-fetch": "^3.2.8"
+	},
+	"devDependencies": {
+		"eslint": "^8.24.0"
+	}
 }
