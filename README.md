@@ -2,9 +2,9 @@
 
 ## About
 
-discord-delphi is a [Discord](https://discord.com/) bot that uses the [Delphi AI](https://delphi.allenai.org/) to provide moral and ethical judgements. Through the bot, users can have their messages judged for morality. It is developed in [TypeScript](https://www.typescriptlang.org/).
+`discord-delphi` is a [Discord](https://discord.com/) bot that uses the [Delphi AI](https://delphi.allenai.org/) to provide moral and ethical judgements. Through the bot, users can have their messages judged for morality. It is developed in [TypeScript](https://www.typescriptlang.org/).
 
-It was originally started in October 2021 using the codebase of the [discord-cleverbot](https://github.com/JstnMcBrd/discord-cleverbot) project.
+The project was started in October 2021 using the codebase of the [discord-cleverbot](https://github.com/JstnMcBrd/discord-cleverbot) project.
 
 ## Licensing
 
@@ -21,7 +21,7 @@ Please see [GitHub's guide on licensing](https://docs.github.com/en/repositories
 ### Setting up the code
 
 - You will need an environment with [node.js v18](https://nodejs.org/en/download) installed (or use the Dev Container - see the [Development](#development) section below).
-- Run `git pull https://github.com/JstnMcBrd/discord-delphi.git` to clone the repo.
+- Run `git clone https://github.com/JstnMcBrd/discord-delphi.git` to clone the repo.
 - Create a new file called `.env` and add your access token, using [`.env.example`](./.env.example) as an example.
 
 ### Running the code
