@@ -1,6 +1,6 @@
 {
 	"name": "discord-delphi",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Ethics bot for Discord",
 	"author": "Justin McBride",
 	"type": "module",
@@ -16,7 +16,7 @@
 	},
 	"dependencies": {
 		"@colors/colors": "^1.6.0",
-		"delphi-ai": "^1.0.0",
+		"delphi-ai": "^1.0.2",
 		"discord.js": "^14.13.0",
 		"dotenv": "^16.3.1"
 	},

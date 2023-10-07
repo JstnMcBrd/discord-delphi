@@ -44,7 +44,6 @@ export const messageCreate = new EventHandler("messageCreate")
 		catch (err) {
 			error(err);
 
-			// If unknown error, respond with error message
 			await replyWithError(message, err);
 		}
 
@@ -73,7 +72,6 @@ function logExchange (channel: TextBasedChannel, prompt: string, response: strin
  * @returns The response as a `Message` object
  */
 async function sendOrReply (message: Message, response: string): Promise<Message> {
-	// Use reply if message is not the latest message
 	return isLatestMessage(message)
 		? message.channel.send(response)
 		: message.reply(response);
