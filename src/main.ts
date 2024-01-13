@@ -1,12 +1,12 @@
 /** discord-delphi */
 
-import { Client, Partials, GatewayIntentBits } from "discord.js";
+import { Client, Partials, GatewayIntentBits } from 'discord.js';
 
-import { registerEventHandlers } from "./events/index.js";
-import { getToken, load as loadEnv } from "./memory/env.js";
-import { info } from "./logger.js";
+import { registerEventHandlers } from './events/index.js';
+import { getToken, load as loadEnv } from './memory/env.js';
+import { info } from './logger.js';
 
-info("discord-delphi");
+info('discord-delphi');
 info();
 
 // Load environment variables
@@ -34,5 +34,5 @@ const client = new Client({
 registerEventHandlers(client);
 
 // Login
-info("Logging in...");
+info('Logging in...');
 await client.login(token);

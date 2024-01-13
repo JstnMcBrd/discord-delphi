@@ -1,18 +1,18 @@
-import delphi from "delphi-ai";
-import type { Message, TextBasedChannel } from "discord.js";
+import delphi from 'delphi-ai';
+import type { Message, TextBasedChannel } from 'discord.js';
 
-import { EventHandler } from "./EventHandler.js";
-import { formatPrompt } from "../utils/formatPrompt.js";
-import { doesMentionSelf, isFromSelf, isEmpty } from "../utils/messageAnalysis.js";
-import { replyWithError } from "../utils/replyWithError.js";
-import { sleep } from "../utils/sleep.js";
-import { typingSpeed } from "../parameters.js";
-import { debug, error, info } from "../logger.js";
+import { EventHandler } from './EventHandler.js';
+import { formatPrompt } from '../utils/formatPrompt.js';
+import { doesMentionSelf, isFromSelf, isEmpty } from '../utils/messageAnalysis.js';
+import { replyWithError } from '../utils/replyWithError.js';
+import { sleep } from '../utils/sleep.js';
+import { typingSpeed } from '../parameters.js';
+import { debug, error, info } from '../logger.js';
 
 /** Called whenever the client observes a new message. */
-export const messageCreate = new EventHandler("messageCreate")
+export const messageCreate = new EventHandler('messageCreate')
 	.setOnce(false)
-	.setExecution(async message => {
+	.setExecution(async (message) => {
 		// Ignore certain messages
 		if (isFromSelf(message)) {
 			return;
@@ -46,17 +46,16 @@ export const messageCreate = new EventHandler("messageCreate")
 
 			await replyWithError(message, err);
 		}
-
 	});
 
 /**
  * Logs the current exchange.
  */
-function logExchange (channel: TextBasedChannel, prompt: string, response: string): void {
-	info("Generated response");
+function logExchange(channel: TextBasedChannel, prompt: string, response: string): void {
+	info('Generated response');
 	debug(`\tChannel: ${
 		channel.isDMBased()
-			? `@${channel.recipient?.username ?? "unknown user"}`
+			? `@${channel.recipient?.username ?? 'unknown user'}`
 			: `#${channel.name}`
 	} (${channel.id})`);
 	debug(`\t──> ${prompt}`);
@@ -71,7 +70,7 @@ function logExchange (channel: TextBasedChannel, prompt: string, response: strin
  * @param response The response to send
  * @returns The response as a `Message` object
  */
-async function sendOrReply (message: Message, response: string): Promise<Message> {
+async function sendOrReply(message: Message, response: string): Promise<Message> {
 	return isLatestMessage(message)
 		? message.channel.send(response)
 		: message.reply(response);
@@ -80,6 +79,6 @@ async function sendOrReply (message: Message, response: string): Promise<Message
 /**
  * @returns Whether the given message is the latest message in its channel
  */
-function isLatestMessage (message: Message): boolean {
+function isLatestMessage(message: Message): boolean {
 	return message.channel.lastMessageId === message.id;
 }
