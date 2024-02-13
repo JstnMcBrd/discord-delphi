@@ -17,7 +17,7 @@
 		"@colors/colors": "^1.6.0",
 		"delphi-ai": "^2.0.0",
 		"discord.js": "^14.14.1",
-		"dotenv": "^16.4.1"
+		"dotenv": "^16.4.3"
 	},
 	"devDependencies": {
 		"@jstnmcbrd/eslint-config": "^1.0.0",
