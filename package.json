@@ -3,6 +3,20 @@
 	"version": "2.0.2-alpha",
 	"private": true,
 	"description": "Ethics bot for Discord",
+	"keywords": [
+		"bot",
+		"ai",
+		"discord",
+		"discord-js",
+		"ethics",
+		"morality"
+	],
+	"homepage": "https://github.com/JstnMcBrd/discord-delphi",
+	"bugs": "https://github.com/JstnMcBrd/discord-delphi/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JstnMcBrd/discord-delphi.git"
+	},
 	"license": "UNLICENSED",
 	"author": "Justin McBride",
 	"type": "module",
