@@ -11,11 +11,11 @@ export const help = new CommandHandler()
 	.setDescription('Print a simple guide about me')
 	.setExecution(async (interaction) => {
 		const embed = createHelpEmbed(interaction.client.user);
-		
+
 		const button = createSourceCodeButton();
 		const row = new ActionRowBuilder<ButtonBuilder>()
 			.addComponents(button);
-		
+
 		await interaction.reply({
 			embeds: [embed],
 			components: [row],
