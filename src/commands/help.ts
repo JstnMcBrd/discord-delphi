@@ -1,9 +1,9 @@
-import { EmbedBuilder, userMention } from 'discord.js';
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, userMention } from 'discord.js';
 import type { ClientUser } from 'discord.js';
 
 import { CommandHandler } from './CommandHandler.js';
 import { invite } from './invite.js';
-import { lastUpdated, embedColors, version } from '../parameters.js';
+import { embedColors, githubURL, lastUpdated, version } from '../parameters.js';
 
 /** A command that gives the user a simple guide about the bot. */
 export const help = new CommandHandler()
@@ -11,8 +11,14 @@ export const help = new CommandHandler()
 	.setDescription('Print a simple guide about me')
 	.setExecution(async (interaction) => {
 		const embed = createHelpEmbed(interaction.client.user);
+		
+		const button = createSourceCodeButton();
+		const row = new ActionRowBuilder<ButtonBuilder>()
+			.addComponents(button);
+		
 		await interaction.reply({
 			embeds: [embed],
+			components: [row],
 			ephemeral: true,
 		});
 	});
@@ -41,4 +47,14 @@ function createHelpEmbed(user: ClientUser): EmbedBuilder {
 			iconURL: avatarURL ?? undefined,
 		})
 		.setTimestamp(lastUpdated);
+}
+
+/**
+ * @returns A button that links to the source code of the bot
+ */
+function createSourceCodeButton(): ButtonBuilder {
+	return new ButtonBuilder()
+		.setLabel('Source Code')
+		.setURL(githubURL.toString())
+		.setStyle(ButtonStyle.Link);
 }
