@@ -1,7 +1,7 @@
 # discord-delphi
 
 ## Delphi API
-[![API Status](https://github.com/JstnMcBrd/delphi-ai/actions/workflows/api.yml/badge.svg)](https://github.com/JstnMcBrd/delphi-ai/actions/workflows/api.yml)
+[![API status](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/delphi-ai/api.yml?logo=github&label=API%20status)](https://github.com/JstnMcBrd/delphi-ai/actions/workflows/api.yml)
 
 ## About
 
