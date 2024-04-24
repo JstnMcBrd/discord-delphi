@@ -1,5 +1,4 @@
 import { EventHandler } from './EventHandler.js';
-import { start as startActivity } from '../activity.js';
 import { debug } from '../logger.js';
 import { syncCommands } from '../commands/index.js';
 
@@ -9,5 +8,4 @@ export const ready = new EventHandler('ready')
 	.setExecution(async (client) => {
 		debug(`\tUser: ${client.user.username} (${client.user.id})`);
 		await syncCommands(client);
-		startActivity(client);
 	});
