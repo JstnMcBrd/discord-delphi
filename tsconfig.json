@@ -13,6 +13,5 @@
 		"noPropertyAccessFromIndexSignature": true,
 		"verbatimModuleSyntax": true,
 		"isolatedModules": true,
-		"isolatedDeclarations": true,
 	},
 }
