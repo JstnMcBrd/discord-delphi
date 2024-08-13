@@ -28,7 +28,7 @@ const activityOptions: ActivityOptions = {
 };
 
 // Setup client
-const client = new Client({
+const client = new Client<false>({
 	// Setting the activity in the client constructor resolves the disappearing issue
 	// https://github.com/JstnMcBrd/discord-delphi/issues/33
 	presence: {
