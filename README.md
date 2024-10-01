@@ -3,6 +3,10 @@
 [![API status](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/delphi-ai/api.yml?logo=github&label=API%20status)](https://github.com/JstnMcBrd/delphi-ai/actions/workflows/api.yml)
 [![Validate](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/discord-delphi/validate.yml?logo=github&label=Validate)](https://github.com/JstnMcBrd/discord-delphi/actions/workflows/validate.yml)
 
+> <img alt="Warning" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/error.svg"> 
+>
+> This project is permanently broken. Please read [#53](https://github.com/JstnMcBrd/discord-delphi/issues/53).
+
 ## About
 
 `discord-delphi` is a [Discord](https://discord.com/) bot that uses the [Delphi AI](https://delphi.allenai.org/) to provide moral and ethical judgements. Through the bot, users can have their messages judged for morality. It is developed in [TypeScript](https://www.typescriptlang.org/) and relies on the [Node](https://nodejs.org/) module of [delphi-ai](https://www.npmjs.com/package/delphi-ai).
