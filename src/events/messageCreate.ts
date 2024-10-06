@@ -1,5 +1,6 @@
 import delphi from 'delphi-ai';
 import type { Message, TextBasedChannel } from 'discord.js';
+import { PartialGroupDMChannel } from 'discord.js';
 
 import { EventHandler } from './EventHandler.js';
 import { formatPrompt } from '../utils/formatPrompt.js';
@@ -55,7 +56,9 @@ function logExchange(channel: TextBasedChannel, prompt: string, response: string
 	info('Generated response');
 	debug(`\tChannel: ${
 		channel.isDMBased()
-			? `@${channel.recipient?.username ?? 'unknown user'}`
+			? channel instanceof PartialGroupDMChannel
+				? `@${channel.recipients.map(r => r.username).join(',')}`
+				: `@${channel.recipient?.username ?? 'unknown user'}`
 			: `#${channel.name}`
 	} (${channel.id})`);
 	debug(`\t──> ${prompt}`);
@@ -71,6 +74,9 @@ function logExchange(channel: TextBasedChannel, prompt: string, response: string
  * @returns The response as a `Message` object
  */
 async function sendOrReply(message: Message, response: string): Promise<Message> {
+	if (message.channel instanceof PartialGroupDMChannel) {
+		throw new TypeError('Cannot send messages to a PartialGroupDMChannel');
+	}
 	return isLatestMessage(message)
 		? message.channel.send(response)
 		: message.reply(response);
@@ -80,5 +86,8 @@ async function sendOrReply(message: Message, response: string): Promise<Message>
  * @returns Whether the given message is the latest message in its channel
  */
 function isLatestMessage(message: Message): boolean {
+	if (message.channel instanceof PartialGroupDMChannel) {
+		return false;
+	}
 	return message.channel.lastMessageId === message.id;
 }
