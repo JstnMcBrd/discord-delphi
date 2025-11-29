@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support `PartialGroupDMChannel` ([#55](https://github.com/JstnMcBrd/discord-delphi/pull/55))
 - Update runtime to Node 24 ([#58](https://github.com/JstnMcBrd/discord-delphi/pull/58), [#121](https://github.com/JstnMcBrd/discord-delphi/pull/121))
 - Use `clientReady` event instead of `ready` ([#107](https://github.com/JstnMcBrd/discord-delphi/pull/107))
+- Use for-of loops instead of forEach method ([#131](https://github.com/JstnMcBrd/discord-delphi/pull/131))
 
 ### Added
 
