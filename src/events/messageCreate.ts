@@ -1,6 +1,6 @@
 import delphi from 'delphi-ai';
 import type { Message, TextBasedChannel } from 'discord.js';
-import { PartialGroupDMChannel } from 'discord.js';
+import { Events, PartialGroupDMChannel } from 'discord.js';
 
 import { EventHandler } from './EventHandler.js';
 import { formatPrompt } from '../utils/formatPrompt.js';
@@ -11,7 +11,7 @@ import { typingSpeed } from '../parameters.js';
 import { debug, error, info } from '../logger.js';
 
 /** Called whenever the client observes a new message. */
-export const messageCreate = new EventHandler('messageCreate')
+export const messageCreate = new EventHandler(Events.MessageCreate)
 	.setOnce(false)
 	.setExecution(async (message) => {
 		// Ignore certain messages
