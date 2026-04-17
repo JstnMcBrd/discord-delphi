@@ -1,7 +1,6 @@
 # discord-delphi
 
 [![API Status](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/delphi-ai/api-status.yml?logo=github&label=API%20Status)](https://github.com/JstnMcBrd/delphi-ai/actions/workflows/api-status.yml)
-[![CI](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/discord-delphi/ci.yml?logo=github&label=CI)](https://github.com/JstnMcBrd/discord-delphi/actions/workflows/ci.yml)
 
 > <img alt="Warning" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/error.svg"> 
 >
@@ -9,7 +8,7 @@
 
 ## About
 
-`discord-delphi` is a [Discord](https://discord.com/) bot that uses the [Delphi AI](https://delphi.allenai.org/) to provide moral and ethical judgements. Through the bot, users can have their messages judged for morality. It is developed in [TypeScript](https://www.typescriptlang.org/) and relies on the [Node](https://nodejs.org/) module of [delphi-ai](https://www.npmjs.com/package/delphi-ai).
+`discord-delphi` is a [Discord](https://discord.com/) bot that uses the [Delphi AI](https://delphi.allenai.org/) to provide moral and ethical judgements. Through the bot, users can have their messages judged for morality. It is developed in [TypeScript](https://www.typescriptlang.org/), runs with [Node.js](https://nodejs.org/). and relies on the npm module of [delphi-ai](https://www.npmjs.com/package/delphi-ai).
 
 The project was started in October 2021 using the codebase of the [discord-cleverbot](https://github.com/JstnMcBrd/discord-cleverbot) project.
 
@@ -29,7 +28,7 @@ For legal reasons, if you choose to contribute to this project, you agree to giv
 
 ### Setting up the code
 
-- You will need an environment with [Node](https://nodejs.org/en/download) installed (or use the Dev Container - see the [Development](#development) section below).
+- You will need an environment with [Node.js](https://nodejs.org/en/download) installed.
 - Run `git clone https://github.com/JstnMcBrd/discord-delphi.git` to clone the repo.
 - Create a new file called `.env` and add your access token, using [`.env.example`](./.env.example) as an example.
 

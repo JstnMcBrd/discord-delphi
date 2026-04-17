@@ -14,15 +14,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Exit with error code if commands are out-of-sync ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Set user activity on Client initialization to fix user activity disappearing ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Use `Object.assign` instead of `Reflect.set` ([#40](https://github.com/JstnMcBrd/discord-delphi/pull/40))
-- Use native Node `.env` file support instead of `dotenv` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
-- Add Node version requirement of `>=20.6.0` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
+- Use native Node.js `.env` file support instead of `dotenv` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
+- Add Node.js version requirement of `>=20.6.0` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
 - Change error subtypes to better fit their intended meaning ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
 - Support `PartialGroupDMChannel` ([#55](https://github.com/JstnMcBrd/discord-delphi/pull/55))
-- Update runtime to Node 24 ([#58](https://github.com/JstnMcBrd/discord-delphi/pull/58), [#121](https://github.com/JstnMcBrd/discord-delphi/pull/121))
+- Update runtime to Node.js 24 ([#58](https://github.com/JstnMcBrd/discord-delphi/pull/58), [#121](https://github.com/JstnMcBrd/discord-delphi/pull/121))
 - Use `clientReady` event instead of `ready` ([#107](https://github.com/JstnMcBrd/discord-delphi/pull/107))
 - Use for-of loops instead of forEach method ([#131](https://github.com/JstnMcBrd/discord-delphi/pull/131))
 - Format error embeds as code blocks ([#139](https://github.com/JstnMcBrd/discord-delphi/pull/139))
 - Use `Events` enum for event handler names ([#145](https://github.com/JstnMcBrd/discord-delphi/pull/145))
+- Clean up README ([#164](https://github.com/JstnMcBrd/discord-delphi/pull/164))
 
 ### Added
 
@@ -43,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update runtime to Node 20 ([#23](https://github.com/JstnMcBrd/discord-delphi/pull/23))
+- Update runtime to Node.js 20 ([#23](https://github.com/JstnMcBrd/discord-delphi/pull/23))
 - Reformat code with new `eslint` config ([#24](https://github.com/JstnMcBrd/discord-delphi/pull/24), [#25](https://github.com/JstnMcBrd/discord-delphi/pull/25), [#27](https://github.com/JstnMcBrd/discord-delphi/pull/27))
 
 ### Added
@@ -93,10 +94,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make all embeds use a default color palette ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
 - Use command mentions for all embeds that mention commands ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
 - Use environment variables for sensitive tokens instead of `config.json` ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
-- Refactor `package.json` to follow best practices for a NodeJS project ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
+- Refactor `package.json` to follow best practices for a Node.js project ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
 - Update documentation in README for complete refactor ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
 - Improve README to be more concise ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
-- Replace `node-fetch` dependency with native NodeJS `fetch` method ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
+- Replace `node-fetch` dependency with native Node.js `fetch` method ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
 - Include the year Delphi was released in the `/help` embed ([#10](https://github.com/JstnMcBrd/discord-delphi/pull/10))
 
 ### Added
