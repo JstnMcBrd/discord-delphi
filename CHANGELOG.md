@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Remove user activity manager that set user activity on a regular schedule ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
+- Remove build step ([#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 
 ### Fixed
 
