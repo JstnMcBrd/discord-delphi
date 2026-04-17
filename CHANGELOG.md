@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Set user activity on Client initialization to fix user activity disappearing ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Use `Object.assign` instead of `Reflect.set` ([#40](https://github.com/JstnMcBrd/discord-delphi/pull/40))
 - Use native Node.js `.env` file support instead of `dotenv` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
-- Add Node.js version requirement of `>=20.6.0` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
+- Add Node.js version requirement of `^22.18.0 || >=24` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42), [#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 - Change error subtypes to better fit their intended meaning ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
 - Support `PartialGroupDMChannel` ([#55](https://github.com/JstnMcBrd/discord-delphi/pull/55))
 - Update runtime to Node.js 24 ([#58](https://github.com/JstnMcBrd/discord-delphi/pull/58), [#121](https://github.com/JstnMcBrd/discord-delphi/pull/121))
