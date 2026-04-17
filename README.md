@@ -1,7 +1,6 @@
 # discord-delphi
 
 [![API Status](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/delphi-ai/api-status.yml?logo=github&label=API%20Status)](https://github.com/JstnMcBrd/delphi-ai/actions/workflows/api-status.yml)
-[![CI](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/discord-delphi/ci.yml?logo=github&label=CI)](https://github.com/JstnMcBrd/discord-delphi/actions/workflows/ci.yml)
 
 > <img alt="Warning" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/error.svg"> 
 >
