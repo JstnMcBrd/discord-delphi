@@ -19,12 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change error subtypes to better fit their intended meaning ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
 - Support `PartialGroupDMChannel` ([#55](https://github.com/JstnMcBrd/discord-delphi/pull/55))
 - Update runtime to Node.js 24 ([#58](https://github.com/JstnMcBrd/discord-delphi/pull/58), [#121](https://github.com/JstnMcBrd/discord-delphi/pull/121))
-- Use `clientReady` event instead of `ready` ([#107](https://github.com/JstnMcBrd/discord-delphi/pull/107))
+- Use `clientReady` event instead of deprecated `ready` ([#107](https://github.com/JstnMcBrd/discord-delphi/pull/107))
 - Use for-of loops instead of forEach method ([#131](https://github.com/JstnMcBrd/discord-delphi/pull/131))
 - Format error embeds as code blocks ([#139](https://github.com/JstnMcBrd/discord-delphi/pull/139))
 - Use `Events` enum for event handler names ([#145](https://github.com/JstnMcBrd/discord-delphi/pull/145))
 - Clean up README ([#164](https://github.com/JstnMcBrd/discord-delphi/pull/164))
 - Run TypeScript natively with Node.js ([#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
+- Use ephemeral flag instead of deprecated response option ([#166](https://github.com/JstnMcBrd/discord-delphi/pull/166))
 
 ### Added
 
