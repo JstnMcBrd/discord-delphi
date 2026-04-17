@@ -1,8 +1,8 @@
 import { Events } from 'discord.js';
 
-import { EventHandler } from './EventHandler.js';
-import { debug } from '../logger.js';
-import { syncCommands } from '../commands/index.js';
+import { EventHandler } from './EventHandler.ts';
+import { debug } from '../logger.ts';
+import { syncCommands } from '../commands/index.ts';
 
 /** Called once the client successfully logs in. */
 export const clientReady = new EventHandler(Events.ClientReady)

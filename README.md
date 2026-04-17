@@ -8,7 +8,7 @@
 
 ## About
 
-`discord-delphi` is a [Discord](https://discord.com/) bot that uses the [Delphi AI](https://delphi.allenai.org/) to provide moral and ethical judgements. Through the bot, users can have their messages judged for morality. It is developed in [TypeScript](https://www.typescriptlang.org/), runs with [Node.js](https://nodejs.org/). and relies on the npm module of [delphi-ai](https://www.npmjs.com/package/delphi-ai).
+`discord-delphi` is a [Discord](https://discord.com/) bot that uses the [Delphi AI](https://delphi.allenai.org/) to provide moral and ethical judgements. Through the bot, users can have their messages judged for morality. It is developed in [TypeScript](https://www.typescriptlang.org/), runs with [Node.js](https://nodejs.org/), and relies on the npm module of [delphi-ai](https://www.npmjs.com/package/delphi-ai).
 
 The project was started in October 2021 using the codebase of the [discord-cleverbot](https://github.com/JstnMcBrd/discord-cleverbot) project.
 
@@ -35,7 +35,6 @@ For legal reasons, if you choose to contribute to this project, you agree to giv
 ### Running the code
 
 - In the top directory, run `npm install` to download all necessary packages.
-- Run `npm run build` to build the project.
 - Run `npm run commands` to register slash commands with Discord.
 - Run `npm start` to start the bot.
 

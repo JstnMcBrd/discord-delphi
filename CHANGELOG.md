@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Set user activity on Client initialization to fix user activity disappearing ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Use `Object.assign` instead of `Reflect.set` ([#40](https://github.com/JstnMcBrd/discord-delphi/pull/40))
 - Use native Node.js `.env` file support instead of `dotenv` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
-- Add Node.js version requirement of `>=20.6.0` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
+- Add Node.js version requirement of `^22.18.0 || >=24` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42), [#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 - Change error subtypes to better fit their intended meaning ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
 - Support `PartialGroupDMChannel` ([#55](https://github.com/JstnMcBrd/discord-delphi/pull/55))
 - Update runtime to Node.js 24 ([#58](https://github.com/JstnMcBrd/discord-delphi/pull/58), [#121](https://github.com/JstnMcBrd/discord-delphi/pull/121))
@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Format error embeds as code blocks ([#139](https://github.com/JstnMcBrd/discord-delphi/pull/139))
 - Use `Events` enum for event handler names ([#145](https://github.com/JstnMcBrd/discord-delphi/pull/145))
 - Clean up README ([#164](https://github.com/JstnMcBrd/discord-delphi/pull/164))
+- Run TypeScript natively with Node.js ([#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 
 ### Added
 
@@ -34,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Remove user activity manager that set user activity on a regular schedule ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
+- Remove build step ([#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 
 ### Fixed
 
