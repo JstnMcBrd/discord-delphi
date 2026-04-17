@@ -2,13 +2,13 @@ import delphi from 'delphi-ai';
 import type { Message, TextBasedChannel } from 'discord.js';
 import { Events, PartialGroupDMChannel } from 'discord.js';
 
-import { EventHandler } from './EventHandler.js';
-import { formatPrompt } from '../utils/formatPrompt.js';
-import { doesMentionSelf, isFromSelf, isEmpty } from '../utils/messageAnalysis.js';
-import { replyWithError } from '../utils/replyWithError.js';
-import { sleep } from '../utils/sleep.js';
-import { typingSpeed } from '../parameters.js';
-import { debug, error, info } from '../logger.js';
+import { EventHandler } from './EventHandler.ts';
+import { formatPrompt } from '../utils/formatPrompt.ts';
+import { doesMentionSelf, isFromSelf, isEmpty } from '../utils/messageAnalysis.ts';
+import { replyWithError } from '../utils/replyWithError.ts';
+import { sleep } from '../utils/sleep.ts';
+import { typingSpeed } from '../parameters.ts';
+import { debug, error, info } from '../logger.ts';
 
 /** Called whenever the client observes a new message. */
 export const messageCreate = new EventHandler(Events.MessageCreate)
