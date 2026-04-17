@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Format error embeds as code blocks ([#139](https://github.com/JstnMcBrd/discord-delphi/pull/139))
 - Use `Events` enum for event handler names ([#145](https://github.com/JstnMcBrd/discord-delphi/pull/145))
 - Clean up README ([#164](https://github.com/JstnMcBrd/discord-delphi/pull/164))
+- Run TypeScript natively with Node.js ([#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 
 ### Added
 
