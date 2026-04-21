@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add contributing agreement to README ([#35](https://github.com/JstnMcBrd/discord-delphi/pull/35))
 - Explain how project is permanently broken in README ([#54](https://github.com/JstnMcBrd/discord-delphi/pull/54))
 - Add a `CHANGELOG.md` file ([#130](https://github.com/JstnMcBrd/discord-delphi/pull/130))
+- Add automatic command redeployment ([#168](https://github.com/JstnMcBrd/discord-delphi/pull/168))
 
 ### Removed
 
