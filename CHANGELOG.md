@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Use [shields.io](https://shields.io/) for badges in README ([#32](https://github.com/JstnMcBrd/discord-delphi/pull/32))
 - Use `setInterval` instead of `setTimeout` for scheduled tasks like user activity ([#34](https://github.com/JstnMcBrd/discord-delphi/pull/34))
-- Exit with error code if commands are out-of-sync ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Set user activity on Client initialization to fix user activity disappearing ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Use `Object.assign` instead of `Reflect.set` ([#40](https://github.com/JstnMcBrd/discord-delphi/pull/40))
 - Use native Node.js `.env` file support instead of `dotenv` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
@@ -42,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fix `undici` vulnerabilities ([#38](https://github.com/JstnMcBrd/discord-delphi/pull/38))
 - Fix `ws` vulnerability ([#41](https://github.com/JstnMcBrd/discord-delphi/pull/41))
+- Abort on `clientReady` errors to avoid bad state ([#167](https://github.com/JstnMcBrd/discord-delphi/pull/167))
 
 ## [2.1.0] - 2024-02-13
 
