@@ -19,6 +19,4 @@ export const typingSpeed = 8;
 export const embedColors = {
 	error: Colors.Red,
 	info: Colors.Grey,
-	whitelist: Colors.Green,
-	unwhitelist: Colors.Yellow,
 };
