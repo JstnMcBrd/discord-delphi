@@ -10,16 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Use [shields.io](https://shields.io/) for badges in README ([#32](https://github.com/JstnMcBrd/discord-delphi/pull/32))
-- Use `setInterval` instead of `setTimeout` for scheduled tasks like user activity ([#34](https://github.com/JstnMcBrd/discord-delphi/pull/34))
-- Set user activity on Client initialization to fix user activity disappearing ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
+- Use `setInterval` instead of `setTimeout` for scheduled tasks ([#34](https://github.com/JstnMcBrd/discord-delphi/pull/34))
 - Use `Object.assign` instead of `Reflect.set` ([#40](https://github.com/JstnMcBrd/discord-delphi/pull/40))
 - Use native Node.js `.env` file support instead of `dotenv` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
 - Add Node.js version requirement of `^22.18.0 || >=24` ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42), [#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 - Change error subtypes to better fit their intended meaning ([#42](https://github.com/JstnMcBrd/discord-delphi/pull/42))
-- Support `PartialGroupDMChannel` ([#55](https://github.com/JstnMcBrd/discord-delphi/pull/55))
 - Update runtime to Node.js 24 ([#58](https://github.com/JstnMcBrd/discord-delphi/pull/58), [#121](https://github.com/JstnMcBrd/discord-delphi/pull/121))
 - Use `clientReady` event instead of deprecated `ready` ([#107](https://github.com/JstnMcBrd/discord-delphi/pull/107))
-- Use for-of loops instead of forEach method ([#131](https://github.com/JstnMcBrd/discord-delphi/pull/131))
+- Use for-of loops instead of `forEach` method ([#131](https://github.com/JstnMcBrd/discord-delphi/pull/131))
 - Format error embeds as code blocks ([#139](https://github.com/JstnMcBrd/discord-delphi/pull/139))
 - Use `Events` enum for event handler names ([#145](https://github.com/JstnMcBrd/discord-delphi/pull/145))
 - Clean up README ([#164](https://github.com/JstnMcBrd/discord-delphi/pull/164))
@@ -29,18 +27,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add contributing agreement to README ([#35](https://github.com/JstnMcBrd/discord-delphi/pull/35))
+- Add user activity to Client initialization ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Explain how project is permanently broken in README ([#54](https://github.com/JstnMcBrd/discord-delphi/pull/54))
+- Add support for `PartialGroupDMChannel` ([#55](https://github.com/JstnMcBrd/discord-delphi/pull/55))
 - Add a `CHANGELOG.md` file ([#130](https://github.com/JstnMcBrd/discord-delphi/pull/130))
 - Add automatic command redeployment ([#168](https://github.com/JstnMcBrd/discord-delphi/pull/168))
 
 ### Removed
 
-- Remove user activity manager that set user activity on a regular schedule ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
+- Remove user activity manager ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Remove build step ([#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 - Remove `deployCommands` script ([#168](https://github.com/JstnMcBrd/discord-delphi/pull/168))
 
 ### Fixed
 
+- Fix user activity disappearance ([#36](https://github.com/JstnMcBrd/discord-delphi/pull/36))
 - Fix `undici` vulnerabilities ([#38](https://github.com/JstnMcBrd/discord-delphi/pull/38))
 - Fix `ws` vulnerability ([#41](https://github.com/JstnMcBrd/discord-delphi/pull/41))
 - Abort on `clientReady` errors to avoid bad state ([#167](https://github.com/JstnMcBrd/discord-delphi/pull/167))
