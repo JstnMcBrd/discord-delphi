@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix `undici` vulnerabilities ([#38](https://github.com/JstnMcBrd/discord-delphi/pull/38))
 - Fix `ws` vulnerability ([#41](https://github.com/JstnMcBrd/discord-delphi/pull/41))
 - Abort on `clientReady` errors to avoid bad state ([#167](https://github.com/JstnMcBrd/discord-delphi/pull/167))
+- Fix typos ([#169](https://github.com/JstnMcBrd/discord-delphi/pull/169))
 
 ## [2.1.0] - 2024-02-13
 

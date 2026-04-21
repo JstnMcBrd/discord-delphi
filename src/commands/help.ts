@@ -34,7 +34,7 @@ function createHelpEmbed(user: ClientUser): EmbedBuilder {
 		.setColor(embedColors.info)
 		.setTitle('User Guide')
 		.setDescription(
-			`Hello! I am ${mention}, an ethics bot for Discord. I provide judgements on the morality of your messages using artifical intelligence from the [Delphi AI](https://delphi.allenai.org/).`
+			`Hello! I am ${mention}, an ethics bot for Discord. I provide judgments on the morality of your messages using artificial intelligence from the [Delphi AI](https://delphi.allenai.org/).`
 			+ '\n\nDelphi is an AI released in 2021 by the Allen Institute for AI, who described it as *"a computational model for descriptive ethics, i.e., people\'s moral judgments on a variety of everyday situations."*',
 		)
 		.setFields(
