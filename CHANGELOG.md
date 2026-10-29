@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Clean up README ([#164](https://github.com/JstnMcBrd/discord-delphi/pull/164))
 - Run TypeScript natively with Node.js ([#165](https://github.com/JstnMcBrd/discord-delphi/pull/165))
 - Use ephemeral flag instead of deprecated response option ([#166](https://github.com/JstnMcBrd/discord-delphi/pull/166))
+- Update runtime to Node.js 26 ([#225](https://github.com/JstnMcBrd/discord-delphi/pull/225))
 
 ### Added
 
