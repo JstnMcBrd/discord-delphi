@@ -27,7 +27,7 @@
 		"test": "echo \"No tests\""
 	},
 	"dependencies": {
-		"@colors/colors": "^1.6.0",
+		"@colors/colors": "^1.6.1",
 		"delphi-ai": "^2.0.2",
 		"discord.js": "^14.27.0"
 	},
